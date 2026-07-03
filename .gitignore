@@ -8,6 +8,8 @@ __pycache__/
 # Jupyter Notebook
 .ipynb_checkpoints/
 
+# Dataset-->over 150MB
+dataset/creditcard.csv
 # VS Code
 .vscode/
 
