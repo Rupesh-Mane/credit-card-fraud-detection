@@ -116,25 +116,22 @@ Bagging was implemented using Decision Trees with different numbers of estimator
 
 # 📈 Model Performance Comparison
 
-The models were evaluated using:
+The performance of each machine learning model was evaluated using **Accuracy, Precision, Recall, and F1-Score** before and after hyperparameter tuning.
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
+| Model | Default Accuracy | Tuned Accuracy | Default Precision | Tuned Precision | Default Recall | Tuned Recall | Default F1-Score | Tuned F1-Score |
+|------|:----------------:|:--------------:|:-----------------:|:---------------:|:--------------:|:------------:|:----------------:|:--------------:|
+| Logistic Regression | 95.26% | **95.26%** | 98.95% | 97.94% | 92.16% | **93.14%** | 95.43% | **95.48%** |
+| Decision Tree | 95.26% | 93.16% | 98.95% | 93.20% | 92.16% | 94.12% | 95.43% | 93.66% |
+| K-Nearest Neighbors | 91.05% | 92.11% | 96.70% | 96.77% | 86.27% | 88.24% | 91.19% | 92.31% |
+| Support Vector Machine | 94.74% | **95.26%** | 98.94% | 98.95% | 91.18% | 92.16% | 94.90% | 95.43% |
+| Gaussian Naive Bayes | 91.58% | — | 97.78% | — | 86.27% | — | 91.67% | — |
+| Random Forest | 93.16% | 94.74% | 94.06% | 97.92% | 93.14% | 92.16% | 93.60% | 94.95% |
+| Hard Voting | **95.26%** | — | 98.95% | — | 92.16% | — | 95.43% | — |
+| Soft Voting | 94.74% | — | 98.94% | — | 91.18% | — | 94.90% | — |
+| Bagging | 93.68% | 94.74% | 95.92% | 96.94% | 92.16% | 93.14% | 95.00% | 95.00% |
 
-| Model | Default Accuracy | Tuned Accuracy |
-|--------|-----------------:|---------------:|
-| Logistic Regression | 95.26% | **95.26%** |
-| Decision Tree | 95.26% | 93.16% |
-| KNN | 91.05% | 92.11% |
-| SVM | 94.74% | **95.26%** |
-| Gaussian Naive Bayes | 91.58% | - |
-| Random Forest | 93.16% | 94.74% |
-| Hard Voting | **95.26%** | - |
-| Soft Voting | 94.74% | - |
-| Bagging | 93.68% | 94.74% |
-
+> **Final Selected Model:** **Tuned Logistic Regression**  
+> It achieved the best balance of **Accuracy (95.26%)**, **Recall (93.14%)**, and **F1-Score (95.48%)**, making it the most suitable model for credit card fraud detection.
 ---
 
 # 🏆 Final Model Selection
