@@ -1,0 +1,32 @@
+=========================================================
+STEP 1 : src/config/config.py
+=========================================================
+
+LEVEL 1 : Beginner
+=========================================================
+
+# src/config/config.py
+
+RAW_DATA_PATH = "data/raw/creditcard.csv"
+
+BALANCED_DATA_PATH = "data/processed/creditcard_balanced.csv"
+
+MODEL_PATH = "models/logistic_regression.pkl"
+
+
+=========================================================
+LEVEL 2 : Industry
+=========================================================
+
+# src/config/config.py
+
+import os
+
+ROOT_DIR = os.getcwd()
+
+RAW_DATA_PATH = os.path.join(ROOT_DIR, "data", "raw", "creditcard.csv")
+
+BALANCED_DATA_PATH = os.path.join(ROOT_DIR, "data", "processed", "creditcard_balanced.csv")
+
+MODEL_PATH = os.path.join(ROOT_DIR, "models", "logistic_regression.pkl")
+

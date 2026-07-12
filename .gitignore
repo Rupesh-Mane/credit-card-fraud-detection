@@ -9,7 +9,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Dataset-->over 150MB
-dataset/creditcard.csv
+data/raw/creditcard.csv
 # VS Code
 .vscode/
 

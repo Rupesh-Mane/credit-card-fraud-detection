@@ -1,0 +1,1026 @@
+__init__.py (Very Simple)
+
+Definition:
+
+__init__.py tells Python that this folder is a package.
+
+###########################################################
+📄 Module
+A single .py file.
+
+Example:
+
+config.py
+ingestion.py
+train.py
+
+Memory: Module = File 📄
+#####################################################
+📁 Package
+A folder containing Python modules.
+
+Example:
+
+src/
+├── config.py
+├── ingestion.py
+└── train.py
+ 
+Memory: Package = Folder 📁
+##########################################################
+👤 self
+Refers to the current object of a class.
+
+Example:
+
+class DataIngestion:
+
+    def load_data(self):
+        pass
+
+Here, self means this DataIngestion object.
+
+Memory: self = Current Object
+
+###############################################################
+
+📂 __pycache__
+A folder created by Python to make your code run faster.
+Stores compiled .pyc files.
+
+Memory: Python's Cache Folder
+
+⚡ .pyc
+What is .pyc?
+.pyc = Compiled Python Code
+Python converts your .py file into a .pyc file so it can run faster the next time.
+
+Memory:
+.py → Your code 📄
+.pyc → Faster version ⚡
+
+#####################################################################
+
+📁 config.py
+
+Store file paths and settings.
+
+Example:
+RAW_DATA_PATH
+MODEL_PATH
+
+Memory: Config = Paths & Settings
+
+#####################################################################
+
+ingestion.py
+
+Reads the dataset.
+
+Example:
+df = pd.read_csv(RAW_DATA_PATH)
+
+Memory: Ingestion = Read Data
+
+#####################################################################
+
+✅ validation.py
+
+Checks the dataset.
+
+Example:
+Missing values
+Duplicate rows
+Data shape
+
+Memory: Validation = Check Data
+#######################################################################
+
+🔄 transformation.py
+
+Prepares the data.
+
+Example:
+Remove duplicates
+Balance dataset
+Train-test split
+Scaling
+
+Memory: Transformation = Prepare Data
+
+
+#####################################################################################
+===========================
+Running Python Files
+===========================
+
+1. Run a Python File 📄
+
+Syntax:
+python file.py
+
+Example:
+python app.py
+
+Meaning:
+Run a Python file.
+
+
+---------------------------
+
+2. Run a Python Module 📦
+
+Syntax:
+python -m package.module
+
+Example:
+python -m src.data.ingestion
+
+Meaning:
+Run a module inside a package.
+
+
+---------------------------
+
+❌ Wrong
+
+python -m src.data.ingestion.py
+
+Reason:
+When using -m, never write .py.
+
+
+---------------------------
+
+Easy Memory Trick 🚀
+
+python file.py
+        ↓
+Run a File 📄
+
+python -m package.module
+        ↓
+Run a Module 📦
+
+
+For My Project
+
+python -m src.data.ingestion
+
+
+One-Line Revision
+
+Without -m → Run a File 📄
+
+With -m → Run a Module 📦
+
+
+#####################################################################################
+
+=========================================
+notebooks/ Folder (Industry Level)
+=========================================
+
+Purpose:
+Used for experimentation, analysis, and model development.
+
+Recommended Structure:
+
+notebooks/
+│
+├── 01_data_exploration.ipynb
+├── 02_data_preprocessing.ipynb
+├── 03_model_training.ipynb
+├── 04_model_evaluation.ipynb
+└── 05_experiments.ipynb
+
+
+1. 01_data_exploration.ipynb
+--------------------------------
+• Load dataset
+• df.head()
+• df.shape
+• df.info()
+• df.describe()
+• Missing values
+• Duplicate values
+• EDA (plots)
+
+
+2. 02_data_preprocessing.ipynb
+--------------------------------
+• Remove duplicates
+• Handle missing values
+• Balance dataset
+• Feature scaling
+• Train-Test Split
+
+
+3. 03_model_training.ipynb
+--------------------------------
+• Train different ML models
+• Logistic Regression
+• Decision Tree
+• Random Forest
+• SVM
+• KNN
+• XGBoost (if used)
+
+
+4. 04_model_evaluation.ipynb
+--------------------------------
+• Accuracy
+• Precision
+• Recall
+• F1-Score
+• Confusion Matrix
+• ROC-AUC
+
+
+5. 05_experiments.ipynb
+--------------------------------
+• Hyperparameter Tuning
+• Ensemble Learning
+• Compare Models
+• Select Best Model
+
+
+*************************************************************************
+__init__.py (Very Simple)
+
+Definition:
+
+__init__.py tells Python that this folder is a package.
+
+###########################################################
+
+📄 Module
+
+Definition:
+
+A single Python (.py) file.
+
+Example:
+
+config.py
+ingestion.py
+train.py
+
+Memory:
+Module = File 📄
+
+###########################################################
+
+📁 Package
+
+Definition:
+
+A folder containing Python modules.
+
+Example:
+
+src/
+├── config.py
+├── ingestion.py
+└── train.py
+
+Memory:
+Package = Folder 📁
+
+###########################################################
+
+👤 self
+
+Definition:
+
+Refers to the current object of a class.
+
+Example:
+
+class DataIngestion:
+
+    def load_data(self):
+        pass
+
+Here, self means this DataIngestion object.
+
+Memory:
+self = Current Object 👤
+
+###########################################################
+
+📂 __pycache__
+
+Definition:
+
+A folder created by Python to make your code run faster.
+Stores compiled .pyc files.
+
+Memory:
+Python's Cache Folder 📂
+
+###########################################################
+
+⚡ .pyc
+
+Definition:
+
+Compiled Python code.
+Python converts your .py file into a .pyc file so it can run faster the next time.
+
+Memory:
+
+.py = Your Code 📄
+
+.pyc = Faster Version ⚡
+
+###########################################################
+
+📁 src/
+
+Definition:
+
+Main folder containing all source code of the project.
+
+Example:
+
+config/
+data/
+models/
+pipelines/
+utils/
+
+Memory:
+src = Source Code 📁
+
+###########################################################
+
+📁 api/
+
+Definition:
+
+Contains API code that allows users or applications to interact with the ML model.
+
+Example:
+
+app.py
+
+Memory:
+API = Talk to Model 🌐
+
+###########################################################
+
+📄 app.py
+
+Definition:
+
+Starts the FastAPI/Flask application.
+Receives user requests and returns model predictions.
+
+Example:
+
+User
+ ↓
+FastAPI
+ ↓
+Model
+ ↓
+Prediction
+
+Memory:
+app.py = Start API 🚀
+
+###########################################################
+
+📁 config/
+
+Definition:
+
+Stores project configuration files.
+
+Example:
+
+config.py
+config.txt
+
+Memory:
+Config = Project Settings ⚙️
+
+###########################################################
+
+📄 config.py
+
+Definition:
+
+Stores file paths and project settings.
+
+Example:
+
+RAW_DATA_PATH
+
+MODEL_PATH
+
+LOG_PATH
+
+Memory:
+Config = Paths & Settings 📂
+
+###########################################################
+
+📄 config.txt
+
+Definition:
+
+Stores additional configuration information in text format.
+
+Memory:
+Config.txt = Extra Settings 📄
+
+###########################################################
+
+📁 data/
+
+Definition:
+
+Contains all files related to data processing.
+
+Memory:
+Data = Dataset 📊
+
+###########################################################
+
+📄 ingestion.py
+
+Definition:
+
+Reads data from CSV, Excel, Database, or API.
+
+Example:
+
+pd.read_csv("creditcard.csv")
+
+Memory:
+Ingestion = Read Data 📥
+
+###########################################################
+
+✅ validation.py
+
+Definition:
+
+Checks whether the dataset is correct.
+
+Example:
+
+Missing Values
+
+Duplicate Rows
+
+Wrong Columns
+
+Data Shape
+
+Memory:
+Validation = Check Data ✅
+
+###########################################################
+
+🔄 transformation.py
+
+Definition:
+
+Cleans and prepares data for Machine Learning.
+
+Example:
+
+Remove Duplicates
+
+Handle Missing Values
+
+Encoding
+
+Scaling
+
+Train-Test Split
+
+Memory:
+Transformation = Prepare Data 🔄
+
+###########################################################
+
+📁 entity/
+
+Definition:
+
+Contains classes that store project configuration and artifacts.
+
+Memory:
+Entity = Project Information 📦
+
+###########################################################
+
+📄 artifact.py
+
+Definition:
+
+Stores outputs generated during different pipeline stages.
+
+Example:
+
+Raw Data Path
+
+Processed Data Path
+
+Model Path
+
+Metrics
+
+Memory:
+Artifact = Output 📦
+
+###########################################################
+
+📄 config_entity.py
+
+Definition:
+
+Stores configuration objects used across the project.
+
+Memory:
+Config Entity = Configuration Object ⚙️
+
+###########################################################
+
+📁 features/
+
+Definition:
+
+Contains feature engineering code.
+
+Memory:
+Features = Better Inputs ⭐
+
+###########################################################
+
+📄 feature_engineering.py
+
+Definition:
+
+Creates new useful features from existing data.
+
+Example:
+
+Age → Age Group
+
+Weight + Height → BMI
+
+Memory:
+Feature Engineering = Smart Features 🧠
+
+###########################################################
+
+📁 models/
+
+Definition:
+
+Contains all model-related code.
+
+Memory:
+Models = Machine Learning 🤖
+
+###########################################################
+
+📄 train.py
+
+Definition:
+
+Trains the Machine Learning model.
+
+Example:
+
+model.fit(X_train,y_train)
+
+Memory:
+Train = Learn 📚
+
+###########################################################
+
+📄 evaluate.py
+
+Definition:
+
+Evaluates model performance.
+
+Example:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+ROC AUC
+
+Memory:
+Evaluate = Check Performance 📈
+
+###########################################################
+
+📄 predict.py
+
+Definition:
+
+Uses the trained model to predict new data.
+
+Example:
+
+model.predict(new_data)
+
+Memory:
+Predict = Future Answer 🔮
+
+###########################################################
+
+📄 save_model.py
+
+Definition:
+
+Saves the trained model.
+
+Example:
+
+pickle.dump(model,file)
+
+Memory:
+Save Model = Store Brain 💾
+
+###########################################################
+
+📄 tune.py
+
+Definition:
+
+Finds the best hyperparameters for the model.
+
+Example:
+
+GridSearchCV
+
+RandomizedSearchCV
+
+Memory:
+Tune = Best Parameters 🎯
+
+###########################################################
+
+📁 pipelines/
+
+Definition:
+
+Combines multiple project steps into one workflow.
+
+Memory:
+Pipeline = Automation 🔁
+
+###########################################################
+
+📄 training_pipeline.py
+
+Definition:
+
+Runs the complete training process.
+
+Flow:
+
+Read Data
+↓
+
+Validation
+↓
+
+Transformation
+↓
+
+Feature Engineering
+↓
+
+Training
+↓
+
+Evaluation
+↓
+
+Save Model
+
+Memory:
+Training Pipeline = Train Everything 🚂
+
+###########################################################
+
+📄 inference_pipeline.py
+
+Definition:
+
+Runs prediction on new data.
+
+Flow:
+
+New Data
+↓
+
+Transformation
+↓
+
+Load Model
+↓
+
+Prediction
+
+Memory:
+Inference Pipeline = Predict Everything ⚡
+
+###########################################################
+
+📁 utils/
+
+Definition:
+
+Contains helper functions used throughout the project.
+
+Memory:
+Utils = Helper Functions 🛠️
+
+###########################################################
+
+📄 logger.py
+
+Definition:
+
+Stores logs of project activities.
+
+Example:
+
+Training Started
+
+Model Saved
+
+Prediction Done
+
+Memory:
+Logger = Project Diary 📖
+
+###########################################################
+
+📄 exception.py
+
+Definition:
+
+Handles project errors gracefully.
+
+Example:
+
+try:
+    pass
+except Exception as e:
+    print(e)
+
+Memory:
+Exception = Error Handler 🚨
+
+###########################################################
+
+📁 visualization/
+
+Definition:
+
+Contains graph and chart code.
+
+Example:
+
+Confusion Matrix
+
+ROC Curve
+
+Feature Importance
+
+Memory:
+Visualization = Graphs 📊
+
+###########################################################
+
+📁 notebooks/
+
+Definition:
+
+Used for experimentation before writing production code.
+
+Example:
+
+EDA
+
+Model Training
+
+Feature Engineering
+
+Memory:
+Notebook = Experiment 📝
+
+###########################################################
+
+📁 reports/
+
+Definition:
+
+Stores reports, graphs, and evaluation results.
+
+Memory:
+Reports = Results 📑
+
+###########################################################
+
+📁 tests/
+
+Definition:
+
+Contains test cases to verify that the project works correctly.
+
+Example:
+
+Test Ingestion
+
+Test Transformation
+
+Test Prediction
+
+Memory:
+Tests = Verify Code 🧪
+
+###########################################################
+
+📁 models/ (Root Folder)
+
+Definition:
+
+Stores trained machine learning models.
+
+Example:
+
+logistic_regression.pkl
+
+random_forest.pkl
+
+Memory:
+Models Folder = Saved Brain 🧠
+
+###########################################################
+
+📁 data/raw/
+
+Definition:
+
+Stores the original dataset.
+
+Memory:
+Raw = Original Data 📄
+
+###########################################################
+
+📁 data/processed/
+
+Definition:
+
+Stores cleaned and transformed datasets.
+
+Memory:
+Processed = Ready Data ✅
+
+###########################################################
+
+📄 main.py
+
+Definition:
+
+Main file used to start the project.
+
+Example:
+
+Run Training Pipeline
+
+Run Prediction Pipeline
+
+Memory:
+main.py = Start Project ▶️
+
+###########################################################
+
+📄 requirements.txt
+
+Definition:
+
+Lists all Python libraries required for the project.
+
+Example:
+
+pandas
+
+numpy
+
+scikit-learn
+
+fastapi
+
+uvicorn
+
+Memory:
+Requirements = Project Libraries 📚
+
+###########################################################
+
+📄 README.md
+
+Definition:
+
+Explains the project, installation steps, usage, and features.
+
+Memory:
+README = Project Guide 📖
+
+###########################################################
+
+📄 .gitignore
+
+Definition:
+
+Specifies files and folders that Git should ignore.
+
+Example:
+
+__pycache__/
+
+.venv/
+
+.env
+
+Memory:
+.gitignore = Ignore Files 🚫
+
+###########################################################
+
+🐳 Dockerfile
+
+Definition:
+
+Contains instructions to build a Docker image for the project.
+
+Memory:
+Dockerfile = Build Container 🐳
+
+###########################################################
+
+🐳 docker-compose.yml
+
+Definition:
+
+Runs multiple Docker containers together (API, Database, etc.).
+
+Memory:
+Docker Compose = Manage Multiple Containers 🐳
+
+###########################################################
+
+📁 .github/workflows/
+
+Definition:
+
+Contains GitHub Actions workflow files.
+
+Memory:
+GitHub Workflows = Automation 🤖
+
+###########################################################
+
+📄 ci-cd.yml
+
+Definition:
+
+Automatically tests, builds, and deploys the project whenever code is pushed to GitHub.
+
+Example:
+
+Push Code
+↓
+
+Run Tests
+↓
+
+Build Docker Image
+↓
+
+Deploy
+
+Memory:
+CI/CD = Automatic Build & Deployment 🚀
+
+###########################################################
